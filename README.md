@@ -3,7 +3,7 @@ An Arithmetic Parser Demo using Recursive Descent in Lua
 
 ## Features
   * Right-associative addition, subtraction, multiplication and addition.
-  * Left-assosciative exponentiation
+  * Left-associative exponentiation
   * 'e' notation e.g 1e10
   * Unary
   * Parser error reporting (prints the position of the character error)
