@@ -61,12 +61,30 @@ end
 --[[
     Grammar
     
-    expr:   sum
-    sum:    prod (('+' | '-')? prod)* 
-    prod:   pow (('*' | '/')? pow)*
-    pow:    value ('^' pow)*
-    value:  digits | ('(' expr ')')?
-    digits: ('-')? [0-9]* ('.')? [0-9]* ('e' | 'E')? [0-9]*
+    expr
+        :   sum
+        ;
+      
+    sum
+        :   prod (('+' | '-')? prod)* 
+        ;
+      
+    prod   
+        :   pow (('*' | '/')? pow)*
+        ;
+      
+    pow
+        :   value ('^' pow)*
+        ;
+      
+    value:  
+        :   digits 
+        |   ('(' expr ')')?
+        ;
+      
+    digits
+        :   ('-')? [0-9]* (('.')? [0-9]*)? ('e' | 'E')? [0-9]*)?
+        ;
     
 --]]
 local expr, sum, prod, pow, value
